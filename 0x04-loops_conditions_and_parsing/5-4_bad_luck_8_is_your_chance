@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # While loop to print Holberton School 10 times
-n=1
+n=0
 
 while [ $n -lt 10 ]
 do
-	echo "Holberton School"
 	((n++))
 	if [[ $n -eq 4 ]] 
 	then
@@ -13,6 +12,6 @@ do
 	then
 		echo "good luck"
 	else
-		true
+		echo "Holberton School"
 	fi
 done
