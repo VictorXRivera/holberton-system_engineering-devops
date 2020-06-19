@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# While loop to print Holberton School 10 times
+n=0
+
+while [ $n -lt 10 ]
+do
+	echo "Holberton School"
+	((n++))
+	if [[ $n -eq 4 ]] 
+	then
+		echo "bad luck"
+	elif [[ $n -eq 8 ]]
+	then
+		echo "good luck"
+	else
+		true
+	fi
+done
