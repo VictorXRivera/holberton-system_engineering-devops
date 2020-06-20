@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# For loop and ls
+# shellcheck disable=SC1007
+
+h= /bin/ls | cut -d '-' -f 2
+
+for b in $h
+do
+	echo "$b"
+done
