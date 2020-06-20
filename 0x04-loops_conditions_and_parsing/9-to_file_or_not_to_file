@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # To file or not to file
-if test - e "holbertonschool"
+if test -e "holbertonschool"
 then
 	echo "holbertonschool file exists"
 	if test -s "holbertonschool" # file is empty
