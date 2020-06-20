@@ -3,7 +3,7 @@
 
 n=0
 
-while [ $n -lt 12 ]
+while [ $n -le 12 ]
 do
 	m=1
 	echo "Hour: $n"
