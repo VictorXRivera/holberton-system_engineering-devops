@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Highlander
+trap "echo 'I am invincible!!!'" SIGINT SIGTERM
+
 while true
 do
 	echo "To infinity and beyond"
 	sleep 2
-	trap "./67-kill_me_now_made_easy" SIGTERM
-	echo "I am invincible!!!"
 done
