@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Easier kill process script
+pkill 4-to_infinity_and_beyond
