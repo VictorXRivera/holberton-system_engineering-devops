@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script to display listening ports with only listening sockets, PID and name of program
+sudo netstat -tulpn
