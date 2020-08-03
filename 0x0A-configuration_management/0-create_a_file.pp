@@ -1,3 +1,4 @@
+# Manifest to create a file in /tmp directory
 file { '/tmp/holberton':
   ensure  => file,
   owner   => 'www-data',
