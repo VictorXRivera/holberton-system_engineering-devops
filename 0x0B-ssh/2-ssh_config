@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# SSH config file
+Host ubuntu
+	IdentityFile ~/.ssh/holberton
