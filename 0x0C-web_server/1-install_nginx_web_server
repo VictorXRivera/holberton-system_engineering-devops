@@ -4,8 +4,10 @@
 
 apt-get update
 apt-get install -y nginx
+
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
+
 echo "Holberton School" > /etc/nginx/html/index.html
 printf %s "server {
      listen      80 default_server;
@@ -14,4 +16,5 @@ printf %s "server {
      index       index.html index.htm;
 }
 " > /etc/nginx/sites-available/default
+
 service nginx restart
