@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Custom config of nginx on multiple servers
+
+# Installing and setting up nginx
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+
+# Updating index.html and 404.html
+echo 'Holberton School' | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+# Setting the hostname to config file
+sudo service nginx start
+display_string="\\tadd_header X-Served-By 1056-web-01;"
+sudo sed -i "19i $display_string" /etc/nginx/nginx.conf
+
+# Custom redirect
+sudo service nginx start
+display_string="\\\tewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "19i $display_string" /etc/nginx/sites-available/default
+
+# Custom 404
+display_string="\\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}"
+sudo sed -i "20i $display_string" /etc/nginx/sites-available/default
+
+# Start up nginx after reloading config file
+sudo service nginx start
+# If nginx is currently running, restart it
+sudo service nginx restart
+# Reload nginx to make sure everything works
+sudo service nginx reload
