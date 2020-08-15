@@ -1,13 +1,4 @@
 #!/usr/bin/env bash
-# Configuration script
-
-sudo rm /etc/nginx/sites-available/default
-sudo touch /etc/nginx/sites-available/default
-
-printf %s "server {
-     listen      80 default_server;
-     listen      [::]:80 default_server;
-}
-" > /etc/nginx/sites-available/default
-
+# Using sed to remove line that is causing issues in default file
+sed -i -e 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
