@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configuring server to listen to port 80
+printf %s "server {
+     listen      80 default_server;
+     listen      [::]:80 default_server;
+}
+" > /etc/nginx/sites-available/default
+
+service nginx restart
