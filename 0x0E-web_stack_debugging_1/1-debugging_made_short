@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Using pkill to kill nginx process after removing line
+sed -i -e 's/8080/80/g' /etc/nginx/sites-enabled/default
+pkill -1 nginx
