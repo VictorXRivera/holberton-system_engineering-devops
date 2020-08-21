@@ -45,18 +45,12 @@ frontend www
         bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/lb-01.vx-rivera.tech.pem
         http-request redirect scheme https unless { ssl_fc }
-        reqadd X-Forwarded-Proto:\ http
-        default_backend www-backend
-
-backend www-backend
-        redirect scheme https if !{ ssl_fc }
-        server 1056-web-01 34.75.43.80:80 check
-        server 1056-web-02 34.73.48.81:80 check
+        default_backend servers
 
 backend servers
         balance roundrobin
-        server 1056-web-01 34.75.43.80
-        server 1056-web-02 34.73.48.81
+        server 1056-web-01 34.75.43.80:80 check
+        server 1056-web-02 34.73.48.81:80 check
 
 backend letsencrypt-backend
         server letsencrypt 127.0.0.1:54321
