@@ -13,7 +13,7 @@ import sys
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     employee_name = sys.argv[1]
-    to_json = employee_name + ".json"
+    filename = employee_name + ".json"
 
     name = requests.get(url + "users/" + employee_name)
     name = name.json()
@@ -28,5 +28,5 @@ if __name__ == "__main__":
     todo = {}
     todo[employee_name] = done_list
 
-    with open(to_json, mode="w") as json_file:
+    with open(filename, mode="w") as json_file:
         json.dump(todo, json_file)
