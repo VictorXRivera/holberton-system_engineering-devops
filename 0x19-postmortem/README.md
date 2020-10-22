@@ -29,4 +29,6 @@ Tasks:
 - Implement Function Calls
 - Always make sure R.O.B is okay
 
-![Image of ROB](https://i.pinimg.com/564x/49/0a/b0/490ab0bbc6a5e127113eb6fb85a7a0aa.jpg)
+<p align="center">
+  <img width="460" height="300" src="https://i.pinimg.com/564x/49/0a/b0/490ab0bbc6a5e127113eb6fb85a7a0aa.jpg">
+</p>
