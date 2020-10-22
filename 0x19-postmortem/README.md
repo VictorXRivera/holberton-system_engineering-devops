@@ -29,4 +29,4 @@ Tasks:
 - Implement Function Calls
 - Always make sure R.O.B is okay
 
-![Image of R.O.B with T E E T H(https://memestatic.fjcdn.com/pictures/Rob+with+teeth_1d8038_7085855.jpg)
+![Image of R.O.B with T E E T H](https://memestatic.fjcdn.com/pictures/Rob+with+teeth_1d8038_7085855.jpg)
